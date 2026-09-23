@@ -1,0 +1,39 @@
+.ds-progress {
+  --ds-progress-h: 0.5rem; --ds-progress-radius: 50rem;
+  width: 100%; height: var(--ds-progress-h);
+  background: var(--ds-secondary-100); border-radius: var(--ds-progress-radius);
+  overflow: hidden; position: relative;
+}
+.ds-progress-bar {
+  height: 100%; border-radius: var(--ds-progress-radius);
+  transition: width 400ms cubic-bezier(0.4,0,0.2,1);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.ds-progress--primary .ds-progress-bar { background: var(--ds-primary); }
+.ds-progress--success .ds-progress-bar { background: var(--ds-success); }
+.ds-progress--danger .ds-progress-bar { background: var(--ds-danger); }
+.ds-progress--warning .ds-progress-bar { background: var(--ds-warning); }
+.ds-progress--info .ds-progress-bar { background: var(--ds-info); }
+.ds-progress--gradient .ds-progress-bar { background: linear-gradient(90deg, var(--ds-primary), var(--ds-accent)); }
+.ds-progress--sm { --ds-progress-h: 0.25rem; }
+.ds-progress--lg { --ds-progress-h: 0.75rem; }
+.ds-progress--xl { --ds-progress-h: 1rem; }
+.ds-progress--striped .ds-progress-bar {
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+.ds-progress--animated .ds-progress-bar { animation: ds-progress-stripe 1s linear infinite; }
+.ds-progress--indeterminate .ds-progress-bar { width: 40% !important; animation: ds-progress-indeterminate 1.5s ease-in-out infinite; }
+.ds-progress-label { display: flex; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.375rem; }
+.ds-progress-label-text { font-weight: 500; color: var(--ds-text-primary); }
+.ds-progress-label-value { font-weight: 600; color: var(--ds-text-secondary); }
+
+@keyframes ds-progress-stripe {
+  from { background-position: 1rem 0; }
+  to { background-position: 0 0; }
+}
+@keyframes ds-progress-indeterminate {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(350%); }
+}

@@ -1,0 +1,6 @@
+.ds-breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 0.25rem; list-style: none; padding: 0; margin: 0; font-size: 0.8125rem; }
+.ds-breadcrumb-item { display: flex; align-items: center; gap: 0.25rem; color: var(--ds-text-muted); }
+.ds-breadcrumb-item a { color: var(--ds-text-muted); text-decoration: none; transition: color 150ms; }
+.ds-breadcrumb-item a:hover { color: var(--ds-primary); }
+.ds-breadcrumb-separator { color: var(--ds-secondary-300); font-size: 0.75rem; margin: 0 0.125rem; }
+.ds-breadcrumb-item--active { color: var(--ds-text-primary); font-weight: 500; }

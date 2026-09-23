@@ -1,0 +1,49 @@
+/* ── Design System Bootstrap Overrides ── */
+/* Compatible with existing Bootstrap 5 classes */
+
+/* Buttons */
+.btn-primary { --bs-btn-bg: var(--ds-primary); --bs-btn-border-color: var(--ds-primary); --bs-btn-hover-bg: var(--ds-primary-hover); --bs-btn-hover-border-color: var(--ds-primary-hover); --bs-btn-active-bg: var(--ds-primary-active); --bs-btn-active-border-color: var(--ds-primary-active); }
+.btn-outline-primary { --bs-btn-color: var(--ds-primary); --bs-btn-border-color: var(--ds-primary); --bs-btn-hover-bg: var(--ds-primary); --bs-btn-hover-border-color: var(--ds-primary); --bs-btn-active-bg: var(--ds-primary); }
+
+/* Badges */
+.bg-primary { --bs-bg-opacity: 1; background-color: var(--ds-primary) !important; }
+.text-primary { color: var(--ds-primary) !important; }
+.border-primary { border-color: var(--ds-primary) !important; }
+
+/* Alerts */
+.alert-primary { --bs-alert-color: var(--ds-primary-800); --bs-alert-bg: var(--ds-primary-50); --bs-alert-border-color: var(--ds-primary-200); }
+.alert-success { --bs-alert-color: var(--ds-success-800); --bs-alert-bg: var(--ds-success-50); --bs-alert-border-color: var(--ds-success-200); }
+.alert-danger { --bs-alert-color: var(--ds-danger-800); --bs-alert-bg: var(--ds-danger-50); --bs-alert-border-color: var(--ds-danger-200); }
+.alert-warning { --bs-alert-color: var(--ds-warning-800); --bs-alert-bg: var(--ds-warning-50); --bs-alert-border-color: var(--ds-warning-200); }
+.alert-info { --bs-alert-info-color: var(--ds-info-800); --bs-alert-info-bg: var(--ds-info-50); --bs-alert-info-border-color: var(--ds-info-200); }
+
+/* Spinners */
+.spinner-border { --bs-spinner-color: var(--ds-primary); }
+
+/* Form Controls */
+.form-control:focus { border-color: var(--ds-primary); box-shadow: 0 0 0 0.2rem rgba(22, 163, 74, 0.15); }
+.form-select:focus { border-color: var(--ds-primary); box-shadow: 0 0 0 0.2rem rgba(22, 163, 74, 0.15); }
+
+/* Links */
+a { color: var(--ds-text-link); }
+a:hover { color: var(--ds-primary-hover); }
+
+/* Card */
+.card { border-color: var(--ds-secondary-200); border-radius: var(--ds-radius-lg); box-shadow: var(--ds-shadow-xs); }
+.card-header { background: var(--ds-bg); border-bottom-color: var(--ds-secondary-200); }
+
+/* Modal */
+.modal-content { border: none; border-radius: var(--ds-radius-xl); box-shadow: var(--ds-shadow-modal); }
+.modal-header { border-bottom-color: var(--ds-secondary-200); }
+
+/* Focus visible global */
+:focus-visible { outline: 2px solid var(--ds-primary); outline-offset: 2px; }
+
+/* Selection */
+::selection { background-color: var(--ds-primary-200); color: var(--ds-primary-900); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--ds-secondary-100); }
+::-webkit-scrollbar-thumb { background: var(--ds-secondary-300); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ds-secondary-400); }

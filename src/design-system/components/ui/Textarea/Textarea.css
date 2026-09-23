@@ -1,0 +1,4 @@
+.ds-textarea { min-height: auto; height: auto; padding: 0.625rem 0.875rem; }
+.ds-textarea-field { border: none; outline: none; background: transparent; font-size: var(--ds-input-fs, 0.875rem); color: var(--ds-text-primary); width: 100%; resize: vertical; min-height: 4rem; font-family: inherit; line-height: 1.6; }
+.ds-textarea-field::placeholder { color: var(--ds-secondary-400); }
+.ds-textarea-field:disabled { background: transparent; }

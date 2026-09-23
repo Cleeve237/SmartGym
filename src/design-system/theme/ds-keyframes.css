@@ -1,0 +1,5 @@
+/* Shrink animation for toast progress bar */
+@keyframes ds-shrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}

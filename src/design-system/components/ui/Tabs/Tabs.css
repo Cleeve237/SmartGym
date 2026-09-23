@@ -1,0 +1,22 @@
+.ds-tabs { display: flex; border-bottom: 2px solid var(--ds-secondary-100); gap: 0; }
+.ds-tab {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.125rem; font-size: 0.875rem; font-weight: 500;
+  color: var(--ds-text-secondary); cursor: pointer; border: none; background: none;
+  position: relative; transition: all 150ms ease; white-space: nowrap;
+  border-bottom: 2px solid transparent; margin-bottom: -2px;
+}
+.ds-tab:hover { color: var(--ds-primary); }
+.ds-tab--active { color: var(--ds-primary); border-bottom-color: var(--ds-primary); }
+.ds-tab:focus-visible { outline: 2px solid var(--ds-primary); outline-offset: -2px; border-radius: var(--ds-radius-sm) var(--ds-radius-sm) 0 0; }
+.ds-tab--disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+.ds-tab-icon { font-size: 1rem; }
+.ds-tab-badge { margin-left: 0.25rem; }
+.ds-tabs--pills { border-bottom: none; gap: 0.25rem; }
+.ds-tabs--pills .ds-tab { border-bottom: none; border-radius: var(--ds-radius-md); }
+.ds-tabs--pills .ds-tab--active { background: var(--ds-primary-50); color: var(--ds-primary); }
+.ds-tabs--enclosed { border-bottom: 1px solid var(--ds-secondary-200); }
+.ds-tabs--enclosed .ds-tab { border: 1px solid transparent; border-radius: var(--ds-radius-md) var(--ds-radius-md) 0 0; margin-bottom: -1px; }
+.ds-tabs--enclosed .ds-tab--active { border-color: var(--ds-secondary-200); border-bottom-color: #fff; background: #fff; }
+.ds-tabs-content { padding-top: 1rem; }
+.ds-tabs-extra { margin-left: auto; display: flex; align-items: center; }

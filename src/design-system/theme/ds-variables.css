@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* ── Primary: Vert Émeraude ── */
+  --ds-primary: #16A34A;
+  --ds-primary-hover: #15803D;
+  --ds-primary-active: #166534;
+  --ds-primary-light: #BBF7D0;
+  --ds-primary-lighter: #F0FDF4;
+  --ds-primary-50: #F0FDF4;
+  --ds-primary-100: #DCFCE7;
+  --ds-primary-200: #BBF7D0;
+  --ds-primary-300: #86EFAC;
+  --ds-primary-400: #4ADE80;
+  --ds-primary-500: #22C55E;
+  --ds-primary-600: #16A34A;
+  --ds-primary-700: #15803D;
+  --ds-primary-800: #166534;
+  --ds-primary-900: #14532D;
+
+  /* ── Secondary: Bleu Nuit ── */
+  --ds-secondary: #0F172A;
+  --ds-secondary-50: #F8FAFC;
+  --ds-secondary-100: #F1F5F9;
+  --ds-secondary-200: #E2E8F0;
+  --ds-secondary-300: #CBD5E1;
+  --ds-secondary-400: #94A3B8;
+  --ds-secondary-500: #64748B;
+  --ds-secondary-600: #475569;
+  --ds-secondary-700: #334155;
+  --ds-secondary-800: #1E293B;
+  --ds-secondary-900: #0F172A;
+
+  /* ── Accent: Orange ── */
+  --ds-accent: #F97316;
+  --ds-accent-hover: #EA580C;
+  --ds-accent-50: #FFF7ED;
+  --ds-accent-100: #FFEDD5;
+  --ds-accent-200: #FED7AA;
+  --ds-accent-300: #FDBA74;
+  --ds-accent-400: #FB923C;
+  --ds-accent-500: #F97316;
+  --ds-accent-600: #EA580C;
+  --ds-accent-700: #C2410C;
+  --ds-accent-800: #9A3412;
+  --ds-accent-900: #7C2D12;
+
+  /* ── Semantic ── */
+  --ds-success: #22C55E;
+  --ds-success-50: #F0FDF4;
+  --ds-success-100: #DCFCE7;
+  --ds-success-200: #BBF7D0;
+  --ds-success-300: #86EFAC;
+  --ds-success-400: #4ADE80;
+  --ds-success-500: #22C55E;
+  --ds-success-600: #16A34A;
+  --ds-success-700: #15803D;
+  --ds-success-800: #166534;
+  --ds-success-900: #14532D;
+
+  --ds-danger: #EF4444;
+  --ds-danger-50: #FFF1F2;
+  --ds-danger-100: #FFE4E6;
+  --ds-danger-200: #FECDD3;
+  --ds-danger-300: #FDA4AF;
+  --ds-danger-400: #FB7185;
+  --ds-danger-500: #F43F5E;
+  --ds-danger-600: #E11D48;
+  --ds-danger-700: #BE123C;
+  --ds-danger-800: #9F1239;
+  --ds-danger-900: #881337;
+
+  --ds-warning: #F59E0B;
+  --ds-warning-50: #FFFBEB;
+  --ds-warning-100: #FEF3C7;
+  --ds-warning-200: #FDE68A;
+  --ds-warning-300: #FCD34D;
+  --ds-warning-400: #FBBF24;
+  --ds-warning-500: #F59E0B;
+  --ds-warning-600: #D97706;
+  --ds-warning-700: #B45309;
+  --ds-warning-800: #92400E;
+  --ds-warning-900: #78350F;
+
+  --ds-info: #3B82F6;
+  --ds-info-50: #EFF6FF;
+  --ds-info-100: #DBEAFE;
+  --ds-info-200: #BFDBFE;
+  --ds-info-300: #93C5FD;
+  --ds-info-400: #60A5FA;
+  --ds-info-500: #3B82F6;
+  --ds-info-600: #2563EB;
+  --ds-info-700: #1D4ED8;
+  --ds-info-800: #1E40AF;
+  --ds-info-900: #1E3A8A;
+
+  /* ── Neutral ── */
+  --ds-neutral-50: #FAFAFA;
+  --ds-neutral-100: #F5F5F5;
+  --ds-neutral-200: #E5E5E5;
+  --ds-neutral-300: #D4D4D4;
+  --ds-neutral-400: #A3A3A3;
+  --ds-neutral-500: #737373;
+  --ds-neutral-600: #525252;
+  --ds-neutral-700: #404040;
+  --ds-neutral-800: #262626;
+  --ds-neutral-900: #171717;
+
+  /* ── Text ── */
+  --ds-text-primary: #0F172A;
+  --ds-text-secondary: #475569;
+  --ds-text-muted: #94A3B8;
+  --ds-text-inverse: #FFFFFF;
+  --ds-text-link: #16A34A;
+
+  /* ── Background ── */
+  --ds-bg: #F8FAFC;
+  --ds-bg-alt: #F1F5F9;
+  --ds-bg-card: #FFFFFF;
+  --ds-bg-overlay: rgba(15, 23, 42, 0.6);
+
+  /* ── Typography ── */
+  --ds-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --ds-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --ds-font-weight-light: 300;
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+  --ds-font-weight-extrabold: 800;
+
+  /* ── Font Sizes ── */
+  --ds-font-xs: 0.75rem;
+  --ds-font-sm: 0.875rem;
+  --ds-font-base: 1rem;
+  --ds-font-lg: 1.125rem;
+  --ds-font-xl: 1.25rem;
+  --ds-font-2xl: 1.5rem;
+  --ds-font-3xl: 1.875rem;
+  --ds-font-4xl: 2.25rem;
+  --ds-font-5xl: 3rem;
+  --ds-font-6xl: 3.75rem;
+
+  /* ── Line Heights ── */
+  --ds-leading-tight: 1.25;
+  --ds-leading-snug: 1.375;
+  --ds-leading-base: 1.6;
+  --ds-leading-relaxed: 1.75;
+
+  /* ── Spacing ── */
+  --ds-spacing-0: 0;
+  --ds-spacing-1: 0.25rem;
+  --ds-spacing-2: 0.5rem;
+  --ds-spacing-3: 0.75rem;
+  --ds-spacing-4: 1rem;
+  --ds-spacing-5: 1.25rem;
+  --ds-spacing-6: 1.5rem;
+  --ds-spacing-8: 2rem;
+  --ds-spacing-10: 2.5rem;
+  --ds-spacing-12: 3rem;
+  --ds-spacing-16: 4rem;
+  --ds-spacing-20: 5rem;
+  --ds-spacing-24: 6rem;
+  --ds-spacing-32: 8rem;
+  --ds-spacing-40: 10rem;
+  --ds-spacing-48: 12rem;
+  --ds-spacing-64: 16rem;
+  --ds-spacing-80: 20rem;
+  --ds-spacing-96: 24rem;
+
+  /* ── Border Radius ── */
+  --ds-radius-none: 0;
+  --ds-radius-xs: 0.125rem;
+  --ds-radius-sm: 0.25rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+  --ds-radius-xl: 1rem;
+  --ds-radius-2xl: 1.5rem;
+  --ds-radius-3xl: 2rem;
+  --ds-radius-pill: 50rem;
+  --ds-radius-circle: 50%;
+
+  /* ── Shadows ── */
+  --ds-shadow-none: none;
+  --ds-shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+  --ds-shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --ds-shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.04);
+  --ds-shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
+  --ds-shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.04);
+  --ds-shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.2);
+  --ds-shadow-inner: inset 0 2px 4px rgba(0,0,0,0.06);
+  --ds-shadow-hover: 0 8px 20px rgba(0,0,0,0.1);
+  --ds-shadow-dropdown: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.05);
+  --ds-shadow-modal: 0 25px 50px -12px rgba(0,0,0,0.25);
+  --ds-shadow-toast: 0 8px 20px rgba(0,0,0,0.15);
+
+  /* ── Transitions ── */
+  --ds-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-Index ── */
+  --ds-z-hide: -1;
+  --ds-z-base: 0;
+  --ds-z-dropdown: 1000;
+  --ds-z-sticky: 1020;
+  --ds-z-fixed: 1030;
+  --ds-z-backdrop: 1040;
+  --ds-z-modal: 1050;
+  --ds-z-popover: 1060;
+  --ds-z-tooltip: 1070;
+  --ds-z-toast: 1080;
+  --ds-z-drawer: 1090;
+  --ds-z-loader: 1100;
+
+  /* ── Layout ── */
+  --ds-navbar-height: 72px;
+  --ds-container-max: 1200px;
+  --ds-container-narrow: 768px;
+  --ds-sidebar-width: 280px;
+  --ds-sidebar-collapsed: 72px;
+}

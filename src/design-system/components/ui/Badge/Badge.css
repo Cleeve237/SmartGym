@@ -1,0 +1,22 @@
+.ds-badge {
+  display: inline-flex; align-items: center; gap: 0.25rem;
+  padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 600; line-height: 1.4;
+  border-radius: 50rem; white-space: nowrap; user-select: none;
+  border: 1px solid transparent; transition: all 150ms ease;
+}
+.ds-badge--primary { background: var(--ds-primary-50); color: var(--ds-primary-700); border-color: var(--ds-primary-200); }
+.ds-badge--success { background: var(--ds-success-50); color: var(--ds-success-700); border-color: var(--ds-success-200); }
+.ds-badge--danger { background: var(--ds-danger-50); color: var(--ds-danger-700); border-color: var(--ds-danger-200); }
+.ds-badge--warning { background: var(--ds-warning-50); color: var(--ds-warning-700); border-color: var(--ds-warning-200); }
+.ds-badge--info { background: var(--ds-info-50); color: var(--ds-info-700); border-color: var(--ds-info-200); }
+.ds-badge--dark { background: var(--ds-secondary-800); color: #fff; border-color: var(--ds-secondary-800); }
+.ds-badge--outline { background: transparent; color: var(--ds-text-secondary); border-color: var(--ds-secondary-300); }
+.ds-badge--primary-solid { background: var(--ds-primary); color: #fff; }
+.ds-badge--success-solid { background: var(--ds-success); color: #fff; }
+.ds-badge--danger-solid { background: var(--ds-danger); color: #fff; }
+.ds-badge--warning-solid { background: var(--ds-warning); color: #fff; }
+.ds-badge--info-solid { background: var(--ds-info); color: #fff; }
+.ds-badge--sm { padding: 0.125rem 0.4rem; font-size: 0.6875rem; }
+.ds-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.ds-badge-remove { border: none; background: none; color: inherit; cursor: pointer; padding: 0; font-size: 0.75rem; opacity: 0.7; display: flex; align-items: center; }
+.ds-badge-remove:hover { opacity: 1; }

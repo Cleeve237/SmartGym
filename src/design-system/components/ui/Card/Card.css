@@ -1,0 +1,16 @@
+.ds-card {
+  background: #fff; border-radius: var(--ds-radius-lg); border: 1px solid var(--ds-secondary-200);
+  overflow: hidden; transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+}
+.ds-card-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--ds-secondary-100); display: flex; align-items: center; justify-content: space-between; }
+.ds-card-body { padding: 1.25rem; }
+.ds-card-footer { padding: 1rem 1.25rem; border-top: 1px solid var(--ds-secondary-100); background: var(--ds-secondary-50); }
+.ds-card--hover:hover { transform: translateY(-4px); box-shadow: var(--ds-shadow-hover); }
+.ds-card--elevated { box-shadow: var(--ds-shadow-md); }
+.ds-card--elevated:hover { box-shadow: var(--ds-shadow-lg); }
+.ds-card--clickable { cursor: pointer; }
+.ds-card--clickable:hover { border-color: var(--ds-primary-200); }
+.ds-card--compact .ds-card-body { padding: 1rem; }
+.ds-card--compact .ds-card-header { padding: 0.75rem 1rem; }
+.ds-card--compact .ds-card-footer { padding: 0.75rem 1rem; }
+.ds-card--no-border { border: none; box-shadow: var(--ds-shadow-xs); }

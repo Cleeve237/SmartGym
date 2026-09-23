@@ -1,0 +1,20 @@
+.ds-accordion { border: 1px solid var(--ds-secondary-200); border-radius: var(--ds-radius-lg); overflow: hidden; }
+.ds-accordion--bordered { border: 1px solid var(--ds-secondary-200); }
+.ds-accordion--ghost { border: none; }
+.ds-accordion-item { border-bottom: 1px solid var(--ds-secondary-100); }
+.ds-accordion-item:last-child { border-bottom: none; }
+.ds-accordion-header { margin: 0; }
+.ds-accordion-trigger {
+  display: flex; align-items: center; justify-content: space-between; width: 100%;
+  padding: 1rem 1.125rem; font-size: 0.875rem; font-weight: 600;
+  color: var(--ds-text-primary); background: none; border: none;
+  cursor: pointer; transition: all 150ms ease; text-align: left;
+}
+.ds-accordion-trigger:hover { background: var(--ds-secondary-50); }
+.ds-accordion-trigger:focus-visible { outline: 2px solid var(--ds-primary); outline-offset: -2px; }
+.ds-accordion-icon { color: var(--ds-secondary-400); transition: transform 200ms ease; font-size: 0.75rem; }
+.ds-accordion-icon--open { transform: rotate(180deg); }
+.ds-accordion-content {
+  padding: 0 1.125rem 1rem; font-size: 0.875rem; color: var(--ds-text-secondary);
+  line-height: 1.6; animation: ds-fade-up 200ms ease;
+}

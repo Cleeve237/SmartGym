@@ -1,0 +1,13 @@
+.ds-tooltip-wrapper { position: relative; display: inline-flex; }
+.ds-tooltip {
+  position: absolute; padding: 0.375rem 0.625rem; font-size: 0.75rem; font-weight: 500;
+  line-height: 1.4; border-radius: var(--ds-radius-sm); white-space: nowrap;
+  pointer-events: none; z-index: var(--ds-z-tooltip);
+  animation: ds-fade-in 150ms ease; max-width: 300px;
+}
+.ds-tooltip--dark { background: var(--ds-secondary-900); color: #fff; }
+.ds-tooltip--light { background: #fff; color: var(--ds-text-primary); border: 1px solid var(--ds-secondary-200); box-shadow: var(--ds-shadow-md); }
+.ds-tooltip--top { bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); }
+.ds-tooltip--bottom { top: calc(100% + 6px); left: 50%; transform: translateX(-50%); }
+.ds-tooltip--left { right: calc(100% + 6px); top: 50%; transform: translateY(-50%); }
+.ds-tooltip--right { left: calc(100% + 6px); top: 50%; transform: translateY(-50%); }

@@ -1,0 +1,599 @@
+/* ══════════════════════════════════════
+   REGISTER PAGE — SmartGym
+   ══════════════════════════════════════ */
+
+/* ── Layout (reuse login structure) ── */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+}
+
+.register-illustration {
+  flex: 0 0 40%;
+  max-width: 40%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 50%, #166534 100%);
+}
+
+@media (max-width: 991.98px) {
+  .register-illustration {
+    display: none;
+  }
+}
+
+.register-illustration-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+.register-illustration-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  font-size: 3rem;
+  color: var(--color-white);
+  animation: regFloat 4s ease-in-out infinite;
+}
+
+.register-illustration-title {
+  color: var(--color-white);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.5rem;
+}
+
+.register-illustration-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--font-size-sm);
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ── Floating Cards ── */
+.register-floating-cards {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.register-floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-lg);
+  animation: regFloat 5s ease-in-out infinite;
+}
+
+.register-floating-card:nth-child(1) {
+  top: 12%;
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.register-floating-card:nth-child(2) {
+  top: 50%;
+  right: 6%;
+  animation-delay: 1.5s;
+}
+
+.register-floating-card:nth-child(3) {
+  bottom: 12%;
+  left: 12%;
+  animation-delay: 3s;
+}
+
+.register-floating-card-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.register-floating-card-icon--check {
+  background: var(--color-primary-lighter);
+  color: var(--color-primary);
+}
+
+.register-floating-card-icon--bolt {
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.register-floating-card-icon--shield {
+  background: var(--color-info-light);
+  color: var(--color-info);
+}
+
+.register-floating-card-value {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  line-height: 1.2;
+}
+
+.register-floating-card-label {
+  font-size: 0.6rem;
+  color: var(--color-gray-500);
+}
+
+/* ── Blobs ── */
+.register-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.register-blob--1 {
+  top: -80px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.register-blob--2 {
+  bottom: -60px;
+  left: -60px;
+  width: 160px;
+  height: 160px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Form Side ── */
+.register-form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--color-white);
+  overflow-y: auto;
+}
+
+.register-form-container {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ── Header ── */
+.register-header {
+  margin-bottom: 1.5rem;
+}
+
+.register-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.register-logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.1rem;
+}
+
+.register-logo-text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-dark);
+}
+
+.register-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: 0.35rem;
+}
+
+.register-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+/* ── Social Login ── */
+.register-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.register-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  color: var(--color-dark);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.register-social-btn:hover {
+  border-color: var(--color-gray-400);
+  background: var(--color-gray-100);
+}
+
+.register-social-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Divider ── */
+.register-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.register-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-gray-200);
+}
+
+.register-divider-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  white-space: nowrap;
+}
+
+/* ── Form ── */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.register-field-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.register-field-input-wrapper {
+  position: relative;
+}
+
+.register-field-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-dark);
+  background: var(--color-white);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.register-field-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-lighter);
+}
+
+.register-field-input--error {
+  border-color: var(--color-danger);
+}
+
+.register-field-input--error:focus {
+  box-shadow: 0 0 0 3px var(--color-danger-light);
+}
+
+.register-field-error {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ── Password Toggle ── */
+.register-password-toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-gray-500);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.register-password-toggle:hover {
+  color: var(--color-gray-700);
+}
+
+/* ── Password Strength ── */
+.register-strength {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.register-strength-bar {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.register-strength-segment {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-gray-200);
+  transition: background var(--transition-base);
+}
+
+.register-strength-segment--weak {
+  background: var(--color-danger);
+}
+
+.register-strength-segment--medium {
+  background: var(--color-warning);
+}
+
+.register-strength-segment--strong {
+  background: var(--color-success);
+}
+
+.register-strength-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-base);
+}
+
+.register-strength-label--weak {
+  color: var(--color-danger);
+}
+
+.register-strength-label--medium {
+  color: var(--color-warning);
+}
+
+.register-strength-label--strong {
+  color: var(--color-success);
+}
+
+/* ── Terms ── */
+.register-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  background: var(--color-gray-100);
+  border: 1px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.register-terms--error {
+  border-color: var(--color-danger);
+}
+
+.register-terms input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-gray-400);
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.register-terms-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: 1.5;
+  cursor: pointer;
+  user-select: none;
+}
+
+.register-terms-label a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+
+.register-terms-label a:hover {
+  text-decoration: underline;
+}
+
+.register-terms-error {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+  margin-top: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ── Submit Button ── */
+.register-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-top: 0.15rem;
+}
+
+.register-submit:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.register-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.register-submit-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: regSpin 0.6s linear infinite;
+}
+
+/* ── Benefits ── */
+.register-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.register-benefits-title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.register-benefit {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.register-benefit-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-primary-lighter);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.register-benefit-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+/* ── Footer ── */
+.register-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.register-footer-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+}
+
+.register-footer-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: color var(--transition-fast);
+}
+
+.register-footer-link:hover {
+  color: var(--color-primary-hover);
+}
+
+.register-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  text-decoration: none;
+  margin-top: 0.75rem;
+  transition: color var(--transition-fast);
+}
+
+.register-home-link:hover {
+  color: var(--color-primary);
+}
+
+/* ── Mobile ── */
+@media (max-width: 991.98px) {
+  .register-page {
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .register-form-side {
+    min-height: 100vh;
+  }
+}
+
+/* ── Animations ── */
+@keyframes regFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes regSpin {
+  to { transform: rotate(360deg); }
+}

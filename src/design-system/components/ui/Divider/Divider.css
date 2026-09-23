@@ -1,0 +1,18 @@
+.ds-divider {
+  display: flex; align-items: center; width: 100%; margin: 1rem 0; color: var(--ds-secondary-300);
+}
+.ds-divider::before, .ds-divider::after {
+  content: ''; flex: 1; border-bottom: 1px solid;
+}
+.ds-divider--dashed::before, .ds-divider--dashed::after { border-style: dashed; }
+.ds-divider--dotted::before, .ds-divider--dotted::after { border-style: dotted; }
+.ds-divider-label { padding: 0 0.75rem; font-size: 0.75rem; font-weight: 500; color: var(--ds-text-muted); white-space: nowrap; }
+.ds-divider--vertical {
+  display: inline-flex; flex-direction: column; width: auto; height: 100%;
+  margin: 0 0.75rem; min-height: 1.5rem;
+}
+.ds-divider--vertical::before, .ds-divider--vertical::after {
+  border-bottom: none; border-right: 1px solid; flex: 1;
+}
+.ds-divider--vertical.ds-divider--dashed::before, .ds-divider--vertical.ds-divider--dashed::after { border-style: dashed; }
+.ds-divider--vertical.ds-divider--dotted::before, .ds-divider--vertical.ds-divider--dotted::after { border-style: dotted; }

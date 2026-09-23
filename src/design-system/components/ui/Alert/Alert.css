@@ -1,0 +1,24 @@
+.ds-alert {
+  display: flex; gap: 0.75rem; padding: 0.875rem 1rem;
+  border-radius: var(--ds-radius-md); border: 1px solid transparent;
+  font-size: 0.875rem; line-height: 1.5; position: relative;
+  animation: ds-fade-up 200ms ease;
+}
+.ds-alert-icon { font-size: 1.125rem; flex-shrink: 0; margin-top: 0.0625rem; }
+.ds-alert-content { flex: 1; }
+.ds-alert-title { font-weight: 600; margin-bottom: 0.125rem; }
+.ds-alert-close {
+  border: none; background: none; width: 1.5rem; height: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 0.75rem; opacity: 0.6; transition: opacity 150ms;
+  padding: 0; border-radius: var(--ds-radius-xs); color: inherit;
+}
+.ds-alert-close:hover { opacity: 1; }
+.ds-alert--primary { background: var(--ds-primary-50); border-color: var(--ds-primary-200); color: var(--ds-primary-800); }
+.ds-alert--success { background: var(--ds-success-50); border-color: var(--ds-success-200); color: var(--ds-success-800); }
+.ds-alert--danger { background: var(--ds-danger-50); border-color: var(--ds-danger-200); color: var(--ds-danger-800); }
+.ds-alert--warning { background: var(--ds-warning-50); border-color: var(--ds-warning-200); color: var(--ds-warning-800); }
+.ds-alert--info { background: var(--ds-info-50); border-color: var(--ds-info-200); color: var(--ds-info-800); }
+.ds-alert--dark { background: var(--ds-secondary-800); border-color: var(--ds-secondary-800); color: #fff; }
+.ds-alert--dismissible { padding-right: 2.5rem; }
+.ds-alert-dismiss { position: absolute; top: 0.75rem; right: 0.75rem; }

@@ -1,0 +1,15 @@
+.ds-search {
+  --ds-search-h: 2.5rem; --ds-search-fs: 0.875rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  height: var(--ds-search-h); padding: 0 0.875rem;
+  border: 1px solid var(--ds-secondary-200); border-radius: 50rem;
+  background: #fff; transition: all 200ms ease;
+}
+.ds-search:focus-within { border-color: var(--ds-primary); box-shadow: 0 0 0 3px rgba(22,163,74,0.1); }
+.ds-search--sm { --ds-search-h: 2rem; --ds-search-fs: 0.8125rem; }
+.ds-search--lg { --ds-search-h: 3rem; --ds-search-fs: 1rem; }
+.ds-search-icon { color: var(--ds-secondary-400); font-size: 0.875rem; display: flex; flex-shrink: 0; }
+.ds-search-field { flex: 1; border: none; outline: none; background: transparent; font-size: var(--ds-search-fs); color: var(--ds-text-primary); min-width: 0; }
+.ds-search-field::placeholder { color: var(--ds-secondary-400); }
+.ds-search-clear { border: none; background: none; color: var(--ds-secondary-300); cursor: pointer; padding: 0; display: flex; font-size: 0.75rem; }
+.ds-search-clear:hover { color: var(--ds-secondary-500); }

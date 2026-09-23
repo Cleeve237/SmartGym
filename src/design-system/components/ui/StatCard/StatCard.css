@@ -1,0 +1,25 @@
+.ds-statcard {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.25rem; border-radius: var(--ds-radius-lg);
+  background: #fff; border: 1px solid var(--ds-secondary-200);
+  transition: all 200ms ease;
+}
+.ds-statcard:hover { transform: translateY(-2px); box-shadow: var(--ds-shadow-hover); }
+.ds-statcard-icon {
+  width: 48px; height: 48px; border-radius: var(--ds-radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; flex-shrink: 0;
+}
+.ds-statcard--primary .ds-statcard-icon { background: var(--ds-primary-50); color: var(--ds-primary); }
+.ds-statcard--success .ds-statcard-icon { background: var(--ds-success-50); color: var(--ds-success); }
+.ds-statcard--danger .ds-statcard-icon { background: var(--ds-danger-50); color: var(--ds-danger); }
+.ds-statcard--warning .ds-statcard-icon { background: var(--ds-warning-50); color: var(--ds-warning); }
+.ds-statcard--info .ds-statcard-icon { background: var(--ds-info-50); color: var(--ds-info); }
+.ds-statcard--neutral .ds-statcard-icon { background: var(--ds-secondary-100); color: var(--ds-secondary-500); }
+.ds-statcard-body { flex: 1; min-width: 0; }
+.ds-statcard-label { font-size: 0.8125rem; color: var(--ds-text-muted); margin-bottom: 0.125rem; }
+.ds-statcard-value { font-size: 1.5rem; font-weight: 700; color: var(--ds-text-primary); line-height: 1.2; }
+.ds-statcard-trend { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 600; margin-top: 0.25rem; }
+.ds-statcard-trend--up { color: var(--ds-success); }
+.ds-statcard-trend--down { color: var(--ds-danger); }
+.ds-statcard-subtitle { font-size: 0.75rem; color: var(--ds-text-muted); margin-top: 0.125rem; }

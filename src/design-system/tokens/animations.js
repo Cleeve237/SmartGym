@@ -1,0 +1,30 @@
+export const animations = {
+  duration: {
+    instant: '100ms',
+    fast: '150ms',
+    base: '250ms',
+    slow: '400ms',
+    xslow: '600ms',
+  },
+  easing: {
+    ease: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
+    easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
+    easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
+    easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    spring: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+    bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+  },
+  keyframes: {
+    fadeIn: 'ds-fade-in',
+    fadeUp: 'ds-fade-up',
+    scale: 'ds-scale',
+    slideUp: 'ds-slide-up',
+    slideDown: 'ds-slide-down',
+    slideLeft: 'ds-slide-left',
+    slideRight: 'ds-slide-right',
+    spin: 'ds-spin',
+    pulse: 'ds-pulse',
+    shimmer: 'ds-shimmer',
+    ripple: 'ds-ripple',
+  },
+};
